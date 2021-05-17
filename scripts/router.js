@@ -48,8 +48,8 @@ router.setState = function(state, backButton) {
 
    }
    else if (state.name == "entry") {
-      body.classList.add("single-entry");
       body.classList.remove("settings");
+      body.classList.add("single-entry");
       header.innerHTML = "Entry" + state.id;
       body.removeChild(document.querySelector("entry-page"));
       let newEntry = document.createElement("entry-page");
@@ -59,9 +59,9 @@ router.setState = function(state, backButton) {
          history.pushState(state, "", "#entry" + state.id);
       }
    }
-   else if (state.page == "settings"){
-      body.classList.add("settings");
+   else if (state.name == "settings"){
       body.classList.remove("single-entry");
+      body.classList.add("settings");
       header.innerHTML = "Settings";
       if (backButton == false){
          history.pushState(state, "", "#settings");
