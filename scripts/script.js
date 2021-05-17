@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newPost.entry = entry;
         newPost.id = counter;
         newPost.addEventListener("click", function() {
-        	setState({name: "entry", id: newPost.id});
+        	setState({name: "entry", idNum: newPost.id});
         });
         counter++;
         document.querySelector('main').appendChild(newPost);

@@ -50,13 +50,13 @@ router.setState = function(state, backButton) {
    else if (state.name == "entry") {
       body.classList.remove("settings");
       body.classList.add("single-entry");
-      header.innerHTML = "Entry" + state.id;
+      header.innerHTML = "Entry" + state.idNum;
       body.removeChild(document.querySelector("entry-page"));
       let newEntry = document.createElement("entry-page");
-      newEntry.entry = document.getElementById(state.id).entry;
+      newEntry.entry = document.getElementById(state.idNum).entry;
       body.appendChild(newEntry);
       if (backButton == false){
-         history.pushState(state, "", "#entry" + state.id);
+         history.pushState(state, "", "#entry" + state.idNum);
       }
    }
    else if (state.name == "settings"){
