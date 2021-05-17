@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newPost.entry = entry;
         newPost.id = counter;
         newPost.addEventListener("click", function() {
-        	setState(page: "entry", id: newPost.id);
+        	setState(name: "entry", id: newPost.id);
         });
         counter++;
         document.querySelector('main').appendChild(newPost);
@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.querySelector("header h1").addEventListener("click", function() {
-	setState({page: "home"}, false);
+	setState({name: "home"}, false);
 });
 
 document.querySelector("header img").addEventListener("click", function() {
-	setState({page: "settings"}, false);
+	setState({name: "settings"}, false);
 });
 
 window.onpopstate = function(event) {
