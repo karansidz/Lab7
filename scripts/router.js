@@ -42,7 +42,7 @@ router.setState = function(state, backButton) {
    if (state == null || state.name == "home"){
       body.className = "";
       header.innerHTML = "Journal Entries";
-      if (backButton == false){
+      if (!backButton){
          history.pushState(state, "", window.location.origin);
       }
 
@@ -55,7 +55,7 @@ router.setState = function(state, backButton) {
       let newEntry = document.createElement("entry-page");
       newEntry.entry = document.getElementById(state.idNum).entry;
       body.appendChild(newEntry);
-      if (backButton == false){
+      if (!backButton){
          history.pushState(state, "", "#entry" + state.idNum);
       }
    }
@@ -63,7 +63,7 @@ router.setState = function(state, backButton) {
       body.classList.remove("single-entry");
       body.classList.add("settings");
       header.innerHTML = "Settings";
-      if (backButton == false){
+      if (!backButton){
          history.pushState(state, "", "#settings");
       }
    }
