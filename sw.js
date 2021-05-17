@@ -1,4 +1,4 @@
-/*// sw.js - Service Worker
+// sw.js - Service Worker
 var CACHE_NAME = "my-site-cache-v1";
 var urlsToCache = {
 	"https://cse110lab6.herokuapp.com/entries"
@@ -32,4 +32,4 @@ self.addEventListener('fetch', function(event) {
       }
     )
   );
-}); */
+});
